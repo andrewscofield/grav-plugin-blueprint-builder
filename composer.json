@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "classmap": [
+            "classes/"
+        ]
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.5",
+        "phpunit/phpunit": "^7"
+    }
+}
