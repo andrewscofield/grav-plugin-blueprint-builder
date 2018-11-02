@@ -41,7 +41,6 @@ All classes would be namespaced to `\BlueprintBuilder`
 
 A simple method:
 ```php
-//Simple Method
 $blueprint = new Blueprint('Test Blueprint');
 
 $blueprint->addText('PLUGIN_ADMIN.TITLE')
@@ -57,7 +56,6 @@ $blueprint->addTextarea('Excerpt');
 
 An advanced method:
 ```php
-//Advcaned Method
 $title = new TextField('header.title');
 $title->label = 'PLUGIN_ADMIN.TITLE';
 $title->placeholder = 'Post Title';
