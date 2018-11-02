@@ -55,7 +55,7 @@ $blueprint->addText('Subtitle')
 $blueprint->addTextarea('Excerpt');
 ```
 
-An advanced method
+An advanced method:
 ```php
 //Advcaned Method
 $title = new TextField('header.title');
