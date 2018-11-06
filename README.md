@@ -126,24 +126,21 @@ Maybe then it would be best to have a class for groups of fields? Since quite a 
 $blueprint = new Blueprint('Test Blueprint');
 $content_fields = new BlueprintFields();
 
-$content_fields
-  ->addText('PLUGIN_ADMIN.TITLE')
+$content_fields->addText('PLUGIN_ADMIN.TITLE')
   ->placeholder('Post Title')
   ->key('header.title');
 
-$content_fields
-  ->addText('Subtitle')
+$content_fields->addText('Subtitle')
   ->placeholder('Post Subtitle')
   ->help('If your post has a subtitle, enter it here');
 
-$content_fields
-  ->addTextarea('Excerpt');
+$content_fields->addTextarea('Excerpt');
 
 $blueprint->addTabs()
   ->addTab('Content', $content_fields);
 ```
 
-Which would also make it more convenient for making 'sets' of fields
+Which would also make it more convenient for making 'sets' of fields. For example: 
 
 ```php
 class BlogFields extends BlueprintFields 
@@ -174,7 +171,7 @@ class BlogFields extends BlueprintFields
 
 $blog_fields = new BlogFields();
 $blueprint = new Blueprint('Blog');
-$blueprint->add($blueFields);
+$blueprint->add($blog_fields);
 ```
 
 ## To Do
