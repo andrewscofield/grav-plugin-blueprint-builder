@@ -34,7 +34,7 @@ class TestResultTest extends TestCase
         );
     }
 
-    public function testAddErrorOfTypeIncompleteTest()
+    public function testAddErrorOfTypeIncompleteTest(): void
     {
         $time      = 17;
         $throwable = new IncompleteTestError();
@@ -63,7 +63,7 @@ class TestResultTest extends TestCase
         $this->assertAttributeContainsOnly(TestFailure::class, 'notImplemented', $result);
     }
 
-    public function canSkipCoverageProvider()
+    public function canSkipCoverageProvider(): array
     {
         return [
             ['CoverageClassTest', true],
@@ -75,7 +75,7 @@ class TestResultTest extends TestCase
     /**
      * @dataProvider canSkipCoverageProvider
      */
-    public function testCanSkipCoverage($testCase, $expectedCanSkip)
+    public function testCanSkipCoverage($testCase, $expectedCanSkip): void
     {
         require_once TEST_FILES_PATH . $testCase . '.php';
 

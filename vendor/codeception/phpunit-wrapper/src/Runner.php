@@ -101,10 +101,7 @@ class Runner extends \PHPUnit\TextUI\TestRunner
 
         if (class_exists('\Symfony\Bridge\PhpUnit\SymfonyTestsListener')) {
             $arguments['listeners'] = isset($arguments['listeners']) ? $arguments['listeners'] : [];
-
-            $listener = new \Symfony\Bridge\PhpUnit\SymfonyTestsListener();
-            $listener->globalListenerDisabled();
-            $arguments['listeners'][] = $listener;
+            $arguments['listeners'][] = new \Symfony\Bridge\PhpUnit\SymfonyTestsListener();
         }
 
         $arguments['listeners'][] = $this->printer;

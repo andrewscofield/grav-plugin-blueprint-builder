@@ -93,11 +93,6 @@ class UI extends \PHPUnit\TextUI\ResultPrinter
         $this->lastTestFailed = true;
     }
 
-    public function addRiskyTest(\PHPUnit\Framework\Test $test, \Throwable $e, float $time) : void
-    {
-        $this->lastTestFailed = true;
-    }
-
     public function addSkippedTest(\PHPUnit\Framework\Test $test, \Throwable $e, float $time) : void
     {
         $this->lastTestFailed = true;

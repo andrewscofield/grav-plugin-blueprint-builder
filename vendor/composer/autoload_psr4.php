@@ -28,4 +28,5 @@ return array(
     'Codeception\\PHPUnit\\' => array($vendorDir . '/codeception/phpunit-wrapper/src'),
     'Codeception\\Extension\\' => array($vendorDir . '/codeception/codeception/ext'),
     'Codeception\\' => array($vendorDir . '/codeception/codeception/src/Codeception', $vendorDir . '/codeception/stub/src'),
+    'BlueprintBuilder\\' => array($baseDir . '/classes'),
 );

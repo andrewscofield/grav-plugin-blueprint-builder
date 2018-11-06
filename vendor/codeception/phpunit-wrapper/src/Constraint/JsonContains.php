@@ -49,8 +49,6 @@ class JsonContains extends \PHPUnit\Framework\Constraint\Constraint
                 $failure
             );
         }
-
-        return false;
     }
 
     /**
