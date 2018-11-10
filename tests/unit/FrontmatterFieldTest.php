@@ -1,22 +1,31 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class FrontmatterFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsFrontmatterFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $frontmatterField = $fields->addFrontmatter('Test Frontmatter');
 
-    }
+    $this->assertInstanceOf(
+      FrontmatterField::class,
+      $frontmatterField 
+    );
+
+  }
 }

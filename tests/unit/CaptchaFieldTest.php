@@ -1,4 +1,7 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class CaptchaFieldTest extends \Codeception\Test\Unit
 {
     /**
@@ -14,9 +17,16 @@ class CaptchaFieldTest extends \Codeception\Test\Unit
     {
     }
 
-    // tests
-    public function testSomeFeature()
+    public function testReturnsCaptchaFieldClass()
     {
-
+      $fields = new BlueprintFields();
+      $captchaField = $fields->addCaptcha('Test Captcha');
+  
+      $this->assertInstanceOf(
+        CaptchaField::class,
+        $captchaField 
+      );
+  
     }
+  
 }

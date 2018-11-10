@@ -1,22 +1,31 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class MultilevelFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsMultilevelFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $multilevelField = $fields->addMultilevel('Test Multilevel');
 
-    }
+    $this->assertInstanceOf(
+      MultilevelField::class,
+      $multilevelField 
+    );
+
+  }
 }

@@ -1,4 +1,7 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class FieldsetFieldTest extends \Codeception\Test\Unit
 {
     /**
@@ -14,9 +17,15 @@ class FieldsetFieldTest extends \Codeception\Test\Unit
     {
     }
 
-    // tests
-    public function testSomeFeature()
+    public function testReturnsFieldsetFieldClass()
     {
-
+      $fields = new BlueprintFields();
+      $fieldsetField = $fields->addFieldset('Test Fieldset');
+  
+      $this->assertInstanceOf(
+        FieldsetField::class,
+        $fieldsetField 
+      );
+  
     }
-}
+  }

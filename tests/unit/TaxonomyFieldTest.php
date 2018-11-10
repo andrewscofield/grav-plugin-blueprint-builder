@@ -1,22 +1,31 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class TaxonomyFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsTaxonomyFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $taxonomyField = $fields->addTaxonomy('Test Taxonomy');
 
-    }
+    $this->assertInstanceOf(
+      TaxonomyField::class,
+      $taxonomyField 
+    );
+
+  }
 }

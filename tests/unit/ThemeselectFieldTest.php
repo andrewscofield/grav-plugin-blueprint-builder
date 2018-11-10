@@ -1,22 +1,31 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class ThemeselectFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsThemeselectFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $textField = $fields->addText('Test Text');
 
-    }
+    $this->assertInstanceOf(
+      TextField::class,
+      $textField 
+    );
+
+  }
 }

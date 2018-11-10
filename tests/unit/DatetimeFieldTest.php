@@ -1,4 +1,7 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class DatetimeFieldTest extends \Codeception\Test\Unit
 {
     /**
@@ -14,9 +17,15 @@ class DatetimeFieldTest extends \Codeception\Test\Unit
     {
     }
 
-    // tests
-    public function testSomeFeature()
+    public function testReturnsDatetimeFieldClass()
     {
-
+      $fields = new BlueprintFields();
+      $datetimeField = $fields->addDatetime('Test Datetime');
+  
+      $this->assertInstanceOf(
+        DatetimeField::class,
+        $datetimeField 
+      );
+  
     }
-}
+  }

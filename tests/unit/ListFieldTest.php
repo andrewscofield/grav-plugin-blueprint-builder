@@ -1,22 +1,31 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class ListFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsListFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $listField = $fields->addList('Test List');
 
-    }
+    $this->assertInstanceOf(
+      ListField::class,
+      $listField 
+    );
+
+  }
 }

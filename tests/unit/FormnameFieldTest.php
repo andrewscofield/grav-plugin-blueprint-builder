@@ -1,4 +1,7 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class FormnameFieldTest extends \Codeception\Test\Unit
 {
     /**
@@ -14,9 +17,15 @@ class FormnameFieldTest extends \Codeception\Test\Unit
     {
     }
 
-    // tests
-    public function testSomeFeature()
+    public function testReturnsFormnameFieldClass()
     {
-
+      $fields = new BlueprintFields();
+      $formnameField = $fields->addFormname('Test Formname');
+  
+      $this->assertInstanceOf(
+        FormnameField::class,
+        $formnameField 
+      );
+  
     }
-}
+  }

@@ -1,22 +1,32 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class WeekFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsWeekFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $weekField = $fields->addWeek('Test Week');
 
-    }
+    $this->assertInstanceOf(
+      WeekField::class,
+      $weekField 
+    );
+
+  }
+
 }

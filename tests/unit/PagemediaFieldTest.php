@@ -1,4 +1,7 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class PagemediaFieldTest extends \Codeception\Test\Unit
 {
     /**
@@ -14,9 +17,15 @@ class PagemediaFieldTest extends \Codeception\Test\Unit
     {
     }
 
-    // tests
-    public function testSomeFeature()
+    public function testReturnsPagemediaFieldClass()
     {
-
+      $fields = new BlueprintFields();
+      $pagemediaField = $fields->addPagemedia('Test Pagemedia');
+  
+      $this->assertInstanceOf(
+        PagemediaField::class,
+        $pagemediaField 
+      );
+  
     }
-}
+  }

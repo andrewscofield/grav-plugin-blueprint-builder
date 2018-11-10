@@ -1,22 +1,31 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class ColumnsFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsColumnsFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $columnsField = $fields->addColumns('Test Columns');
 
-    }
+    $this->assertInstanceOf(
+      ColumnsField::class,
+      $columnsField 
+    );
+
+  }
 }

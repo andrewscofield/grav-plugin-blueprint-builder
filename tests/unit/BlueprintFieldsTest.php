@@ -17,11 +17,10 @@ class BlueprintFieldsTest extends \Codeception\Test\Unit
   {
   }
 
-  // tests
   public function testReturnsTextFieldClass()
   {
-    $bluePrints = new BlueprintFields();
-    $textField = $bluePrints->addText('Test TextField');
+    $fields = new BlueprintFields();
+    $textField = $fields->addText('Test Text');
 
     $this->assertInstanceOf(
       TextField::class,

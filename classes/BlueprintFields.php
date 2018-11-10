@@ -5,6 +5,9 @@ namespace BlueprintBuilder;
 class BlueprintFields {
 
   protected $fields;
+  protected $title;
+  protected $extends;
+  protected $rules;
 
   /**
    * Magic method for returning a field class based on a method of this class (e.g. BlueprintFields->addText() would return a new instance of TextField)
@@ -22,13 +25,20 @@ class BlueprintFields {
     if ($prefix === 'add') 
     {
         $field_class = __NAMESPACE__.'\\'.$parameter . 'Field';
-        $field = new $field_class($arguments);
-        $fields[] = &$field;
+        if(class_exists($field_class)){
 
-        return $field;
+          $field = new $field_class($arguments);
+          $fields[] = &$field;
+          
+          return $field;
+        }
+        else
+        {
+          return false;
+        }
     }
 
-    return null;
+    return false;
   }
 
 

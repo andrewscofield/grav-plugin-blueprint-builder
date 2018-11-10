@@ -1,22 +1,32 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class FileFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsFileFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $fileField = $fields->addFile('Test File');
 
-    }
+    $this->assertInstanceOf(
+      FileField::class,
+      $fileField 
+    );
+
+  }
+
 }

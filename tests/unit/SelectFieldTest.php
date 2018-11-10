@@ -1,22 +1,32 @@
 <?php 
+
+namespace BlueprintBuilder;
+
 class SelectFieldTest extends \Codeception\Test\Unit
 {
-    /**
-     * @var \UnitTester
-     */
-    protected $tester;
-    
-    protected function _before()
-    {
-    }
+  /**
+   * @var \UnitTester
+   */
+  protected $tester;
+  
+  protected function _before()
+  {
+  }
 
-    protected function _after()
-    {
-    }
+  protected function _after()
+  {
+  }
 
-    // tests
-    public function testSomeFeature()
-    {
+  public function testReturnsSelectFieldClass()
+  {
+    $fields = new BlueprintFields();
+    $selectField = $fields->addSelect('Test Select');
 
-    }
+    $this->assertInstanceOf(
+      SelectField::class,
+      $selectField 
+    );
+
+  }
+
 }
