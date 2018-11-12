@@ -24,10 +24,9 @@ class BlueprintFields {
 
     if ($prefix === 'add') 
     {
-        $field_class = __NAMESPACE__.'\\'.$parameter . 'Field';
+        $field_class = __NAMESPACE__.'\\Field\\'.$parameter . 'Field';
         if(class_exists($field_class)){
-
-          $field = new $field_class($arguments);
+          $field = new $field_class(...$arguments);
           $fields[] = &$field;
           
           return $field;

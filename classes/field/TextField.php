@@ -2,6 +2,13 @@
 
 namespace BlueprintBuilder\Field;
 
-class TextField {
-    
+use BlueprintBuilder\BlueprintField;
+
+class TextField extends BlueprintField 
+{
+  public function __construct($title){
+    parent::__construct($title);
+
+    $this->type = 'text';
+  }
 }
