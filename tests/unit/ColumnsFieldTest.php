@@ -1,6 +1,6 @@
 <?php 
 
-namespace BlueprintBuilder;
+namespace BlueprintBuilder\Field;
 
 class ColumnsFieldTest extends \Codeception\Test\Unit
 {

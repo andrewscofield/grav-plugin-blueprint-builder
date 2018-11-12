@@ -1,6 +1,6 @@
 <?php 
 
-namespace BlueprintBuilder;
+namespace BlueprintBuilder\Field;
 
 class CheckboxFieldTest extends \Codeception\Test\Unit
 {

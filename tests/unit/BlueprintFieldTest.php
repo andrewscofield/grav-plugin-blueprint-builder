@@ -1,4 +1,7 @@
 <?php 
+
+namespace BlueprintBuilder\Field;
+
 class BlueprintFieldTest extends \Codeception\Test\Unit
 {
     /**

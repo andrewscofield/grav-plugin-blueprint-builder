@@ -1,6 +1,6 @@
 <?php 
 
-namespace BlueprintBuilder;
+namespace BlueprintBuilder\Field;
 
 class PagemediaFieldTest extends \Codeception\Test\Unit
 {
